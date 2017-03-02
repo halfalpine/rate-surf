@@ -1,0 +1,21 @@
+components
+	global
+		detect user's location
+		assign user to established spot
+		ping the noaa api to get direction, speed, period, and height
+	ratings-collector
+		accept rating submission
+			location only accepted within geofenced area
+			location only accepted once ever four hours
+	ratings-distributor
+		automatically displays a best current location
+		
+
+questions
+	what kind of database would work best for this type of query
+		query: given conditions x/y/z, what spot within x miles has the highest rating
+			search all ratings in the 'nearby' field
+	what is the default behavior of the ratings-distributor?
+	how to write algoritm for similar conditions? they won't be exactly the same.
+		wind, period, height, direction (tentative priority)
+		query using $gt && $lt`
